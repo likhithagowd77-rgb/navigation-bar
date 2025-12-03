@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #eef7ff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  width: 90%;
+  margin: 25px auto;
+  padding: 20px 30px;
+  background: #4b0dbc;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0px 6px 18px rgba(75, 13, 188, 0.3);
+  animation: slideDown 0.8s ease;
+}
+
+/* Nav animation */
+@keyframes slideDown {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Hover underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.search-icon {
+  cursor: pointer;
+  font-size: 26px;
+  transition: 0.3s;
+}
+
+.search-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Search Bar */
+.search-bar {
+  width: 90%;
+  background: #4b0dbc;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  height: 0;
+  overflow: hidden;
+  transition: 0.4s ease;
+  box-shadow: 0px 6px 18px rgba(75, 13, 188, 0.3);
+}
+
+.search-bar.active {
+  transform: scaleY(1);
+  height: auto;
+}
+
+.search-box {
+  background: white;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.close-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+.close-icon:hover {
+  transform: rotate(90deg) scale(1.2);
+}
