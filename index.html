@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Navigation Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">CodingStella</div>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+
+    <div class="search-icon" onclick="toggleSearch()">
+      🔍
+    </div>
+  </nav>
+
+  <!-- Animated Search Bar -->
+  <div class="search-bar" id="searchBar">
+    <div class="search-box">
+      <span class="search-emoji">🔍</span>
+      <input type="text" placeholder="Search here..." />
+    </div>
+    <span class="close-icon" onclick="toggleSearch()">✖</span>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
